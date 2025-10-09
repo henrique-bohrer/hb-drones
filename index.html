@@ -1,104 +1,187 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="hover.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Aula09 - Refazer site</title>
+    <title>HB Drones - Imagens Aéreas</title>
 </head>
-<header>
-    <div class="contatos">
-        <div class="cont">
-            <p>49 98428-7347</p>
-        </div>
-        <a class="cont email" href="mailto:henrique300415@gmail.com">
-            <p>henrique300415@gmail.com</p>
-        </a>
-        <div class="cont">
-            <p>R. Ana Berta Roskamp, 915 - Curitiba</p>
-        </div>
-    </div>
-</header>
 
-<nav class="navbar">
-    <div class="container">
-        <a class="navbar-brand hvr-underline-from-center" href="#">
-          <img src="img/logo.png" alt="HB DRONES" height="65" class="logo">
-        </a>
-      </div>
-    <div class="buttons">
-        <a href="#" class="btn-home hvr-grow hvr-glow">Home</a>
-        <a href="#" class="btn-sobre hvr-grow hvr-glow">Sobre</a>
-        <a href="#" class="btn-serv hvr-grow hvr-glow">Serviços</a>
-        <a href="#" class="btn-cadastro hvr-grow hvr-glow">Cadastro</a>
-    </div>
-</nav>
-
-<main class="principal">
-    <div>
-        <img class="projeto" src="img/background.png" width="100%">
-    </div>
-    <div class="resumo">
-        <div class="box-fundo"></div>
-        <div class="titulo"></div>
-        <p class="text">
-            Bem-vindo ao
-        </p>
-        <p class="text1">
-            Nosso Site
-        </p>
-        </div>
-        <div class="box"></div>
-
-        <div class="mini2-png">
-            <img src="img/mini2-png.png" width="30%">
-        </div>
-
-        <p class="sobre">
-            A empresa em questão é uma Microempreendedor Individual (MEI) que oferece serviços de drone e imagens aéreas na região de Curitiba. Seu principal serviço é o acompanhamento de territórios e imagens para imobiliárias, fornecendo imagens de alta qualidade e precisão para ajudar na avaliação de propriedades. 
-
-    Utilizando equipamentos de última geração, a empresa é capaz de capturar imagens aéreas detalhadas e em alta resolução, permitindo que seus clientes tenham uma visão ampla e clara do terreno ou propriedade que estão avaliando. Além disso, os serviços oferecidos pela empresa também podem ser utilizados em outras áreas, como inspeção de infraestruturas, mapeamento de áreas agrícolas, monitoramento ambiental e muitos outros.
-
-    Com uma equipe altamente qualificada e comprometida em fornecer um serviço de qualidade, a empresa busca sempre se atualizar em relação às novas tecnologias e técnicas de captura e processamento de imagens, garantindo assim a satisfação de seus clientes.
-        
-        </p>
-    </div>
-    
-
-    <img class="drone" src="img/mavic-mini-2.jpg" alt="">
-
-</main>
 <body>
-    
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.png" alt="HB DRONES" height="65" class="logo">
+                </a>
+                <div class="buttons">
+                    <a href="#home" class="btn-nav hvr-underline-from-center">Home</a>
+                    <a href="#sobre" class="btn-nav hvr-underline-from-center">Sobre</a>
+                    <a href="#servicos" class="btn-nav hvr-underline-from-center">Serviços</a>
+                    <a href="#portfolio" class="btn-nav hvr-underline-from-center">Portfólio</a>
+                    <a href="#contato" class="btn-nav btn-contato hvr-grow">Contato</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Capturando o Mundo de Cima</h1>
+                <p class="hero-subtitle">Serviços profissionais de filmagem e fotografia com drone em Curitiba.</p>
+                <a href="#servicos" class="btn-main hvr-grow">Veja nossos pacotes</a>
+            </div>
+        </section>
+
+        <section id="sobre" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Sobre a HB Drones</h2>
+                        <p>
+                            A empresa em questão é uma Microempreendedor Individual (MEI) que oferece serviços de drone
+                            e imagens aéreas na região de Curitiba. Seu principal serviço é o acompanhamento de
+                            territórios e imagens para imobiliárias, fornecendo imagens de alta qualidade e precisão
+                            para ajudar na avaliação de propriedades.
+                        </p>
+                        <p>
+                            Utilizando equipamentos de última geração, a empresa é capaz de capturar imagens aéreas
+                            detalhadas e em alta resolução, permitindo que seus clientes tenham uma visão ampla e clara
+                            do terreno ou propriedade que estão avaliando. Além disso, os serviços oferecidos pela
+                            empresa também podem ser utilizados em outras áreas, como inspeção de infraestruturas,
+                            mapeamento de áreas agrícolas, monitoramento ambiental e muitos outros.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <img src="img/mavic-mini-2.jpg" alt="Drone em operação">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="services-section">
+            <div class="container">
+                <h2 class="section-title">Nossos Serviços</h2>
+                <div class="services-grid">
+                    <div class="service-card hvr-grow">
+                        <h3>Pacote Básico</h3>
+                        <p class="price">R$250</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Fotos e vídeos brutos</li>
+                            <li><i class="fas fa-check-circle"></i> Captura em alta resolução</li>
+                            <li><i class="fas fa-check-circle"></i> Ideal para quem prefere editar</li>
+                        </ul>
+                        <a href="#contato" class="btn-main">Solicitar Orçamento</a>
+                    </div>
+                    <div class="service-card service-card-featured hvr-grow">
+                        <h3>Pacote Profissional</h3>
+                        <p class="price">R$300</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Fotos e vídeos tratados</li>
+                            <li><i class="fas fa-check-circle"></i> Edição profissional de cor e luz</li>
+                            <li><i class="fas fa-check-circle"></i> Pronto para usar em suas mídias</li>
+                        </ul>
+                        <a href="#contato" class="btn-main">Solicitar Orçamento</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio-section">
+            <div class="container">
+                <h2 class="section-title">Nosso Portfólio</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item hvr-grow">
+                        <img src="https://via.placeholder.com/400x300.png?text=Projeto+Imobiliário"
+                            alt="Projeto Imobiliário">
+                        <div class="portfolio-info">
+                            <h3>Projeto Imobiliário</h3>
+                            <p>Vista aérea de empreendimento.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item hvr-grow">
+                        <img src="https://via.placeholder.com/400x300.png?text=Acompanhamento+de+Obra"
+                            alt="Acompanhamento de Obra">
+                        <div class="portfolio-info">
+                            <h3>Acompanhamento de Obra</h3>
+                            <p>Registro de progresso de construção.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item hvr-grow">
+                        <img src="https://via.placeholder.com/400x300.png?text=Evento+ao+Ar+Livre"
+                            alt="Evento ao Ar Livre">
+                        <div class="portfolio-info">
+                            <h3>Evento ao Ar Livre</h3>
+                            <p>Cobertura de evento corporativo.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item hvr-grow">
+                        <img src="https://via.placeholder.com/400x300.png?text=Inspeção+de+Estrutura"
+                            alt="Inspeção de Estrutura">
+                        <div class="portfolio-info">
+                            <h3>Inspeção de Estrutura</h3>
+                            <p>Análise de infraestrutura industrial.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item hvr-grow">
+                        <img src="https://via.placeholder.com/400x300.png?text=Mapeamento+Agrícola"
+                            alt="Mapeamento Agrícola">
+                        <div class="portfolio-info">
+                            <h3>Mapeamento Agrícola</h3>
+                            <p>Monitoramento de lavoura.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item hvr-grow">
+                        <img src="https://via.placeholder.com/400x300.png?text=Fotografia+de+Paisagem"
+                            alt="Fotografia de Paisagem">
+                        <div class="portfolio-info">
+                            <h3>Fotografia de Paisagem</h3>
+                            <p>Imagens de alta resolução da natureza.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Entre em Contato</h2>
+                <form action="#" class="contact-form">
+                    <input type="text" name="name" placeholder="Seu Nome" required>
+                    <input type="email" name="email" placeholder="Seu Email" required>
+                    <textarea name="message" placeholder="Descreva seu projeto..." required></textarea>
+                    <button type="submit" class="btn-main">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2024 HB Drones. Todos os direitos reservados.</p>
+                    <p>Curitiba, Paraná</p>
+                </div>
+                <div class="footer-contact">
+                    <a href="mailto:henrique300415@gmail.com">henrique300415@gmail.com</a>
+                    <p>(49) 98428-7347</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
-
-<footer class="rodape">
-    <div class="equip">
-        <p>Ficou com Interesse?</p>        
-    </div>
-
-    <div class="proposta">
-        <p>Gostou da empresa? Quer realizar um projeto e tirar ele do papel? Só colocar os dados solicitados à direita</p>
-    </div>
-
-
-    <form>
-        <label for="name" placeholder="Nome">Nome:</label>
-        <input type="text" id="name" name="name" required>
-    
-        <label for="email" placeholder="Email">Email:</label>
-        <input type="email" id="email" name="email" required>
-    
-        <label for="message" placeholder="Mensagem">O que seria o projeto?:</label>
-        <textarea id="message" name="message" required></textarea>
-    
-        <button type="submit" class="hvr-grow hvr-glow">Enviar</button>
-    </form>
-</footer>
 
 </html>
