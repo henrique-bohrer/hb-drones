@@ -1,0 +1,466 @@
+/* === GOOGLE FONTS === */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+/* === CSS VARIABLES === */
+:root {
+    --header-height: 3.5rem;
+
+    /* Colors */
+    --first-color: #007BFF; /* Azul Principal */
+    --first-color-alt: #0056b3; /* Azul Hover */
+    --title-color: #ffffff; /* Branco */
+    --text-color: #c1c1c1; /* Cinza Claro (um pouco mais claro) */
+    --text-color-light: #8f8f8f; /* Cinza Médio */
+    --body-color: #1a1a1a; /* Preto Suave */
+    --container-color: #242424; /* Cinza Escuro */
+    --border-color: #414141; /* Cinza Borda */
+    --bg-darker: #2d2d2d; /* Cor de fundo alternativa */
+
+    /* Font and typography */
+    --body-font: 'Quicksand', sans-serif;
+    --h1-font-size: 2.5rem; /* Aumentado */
+    --h2-font-size: 1.75rem; /* Aumentado */
+    --h3-font-size: 1.35rem; /* Aumentado */
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+
+    /* Font weight */
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+
+    /* Box Shadow */
+    --box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4); /* Sombra mais pronunciada */
+
+    /* Transitions */
+    --transition-base: all 0.3s ease-in-out;
+}
+
+/* === BASE STYLES === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height); /* Ajusta scroll para seções */
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--title-color);
+    font-weight: var(--font-semibold);
+    margin-bottom: 0.75rem;
+}
+
+h1 { font-size: var(--h1-font-size); }
+h2 { font-size: var(--h2-font-size); }
+h3 { font-size: var(--h3-font-size); }
+
+a {
+    text-decoration: none;
+    color: var(--first-color);
+    transition: var(--transition-base);
+}
+
+a:hover {
+    color: var(--first-color-alt);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove espaço extra abaixo das imagens */
+}
+
+ul {
+    list-style: none;
+}
+
+/* === REUSABLE CLASSES === */
+.section {
+    padding: 6rem 0 4rem; /* Aumenta padding superior */
+}
+
+.section-title {
+    font-size: var(--h2-font-size);
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--first-color);
+    font-weight: var(--font-bold);
+}
+
+.bg-darker {
+    background-color: var(--bg-darker);
+}
+
+.btn {
+    transition: var(--transition-base);
+    font-weight: var(--font-bold);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.btn-main {
+    background-color: var(--first-color);
+    color: var(--title-color);
+    border: 2px solid var(--first-color);
+}
+
+.btn-main:hover {
+    background-color: var(--first-color-alt);
+    color: var(--title-color);
+    border-color: var(--first-color-alt);
+    transform: translateY(-2px); /* Efeito sutil ao passar o mouse */
+}
+
+/* === HEADER & NAV === */
+.header {
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.navbar {
+    height: var(--header-height);
+}
+
+.logo {
+    height: 55px; /* Ajuste conforme necessário */
+}
+
+.navbar .navbar-nav .nav-link { /* Seletores Bootstrap específicos */
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    padding: 0.5rem 1rem;
+    position: relative; /* Para o hvr-underline */
+}
+
+/* Estilo para Toggler (menu hamburguer) */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Adiciona fundo ao header no scroll */
+.scroll-header {
+    background-color: var(--container-color);
+    box-shadow: var(--box-shadow);
+}
+
+/* Estilo do botão Contato na Nav */
+.btn-contato {
+    background-color: var(--first-color);
+    color: var(--title-color) !important; /* !important para sobrescrever Bootstrap */
+    padding: 0.5rem 1rem !important; /* !important para sobrescrever Bootstrap */
+    border-radius: 5px;
+    font-weight: var(--font-bold);
+}
+
+.btn-contato:hover {
+    background-color: var(--first-color-alt);
+    color: var(--title-color) !important;
+}
+
+/* Ajuste para menu responsivo Bootstrap */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: var(--container-color);
+        padding: 1rem;
+        border-radius: 5px;
+        margin-top: 0.5rem;
+    }
+    .navbar .navbar-nav .nav-link {
+        padding: 0.75rem 0; /* Mais espaçamento vertical */
+    }
+    .navbar .navbar-nav .nav-item:not(:last-child) {
+        border-bottom: 1px solid var(--border-color);
+    }
+    .btn-contato {
+        margin-top: 1rem;
+        display: block; /* Ocupa a largura toda */
+        text-align: center;
+    }
+}
+
+
+/* === HERO SECTION === */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/background.png') no-repeat center center/cover;
+    min-height: 100vh; /* Usa min-height para flexibilidade */
+    color: var(--title-color);
+}
+
+.hero-content {
+    max-width: 650px; /* Pouco maior */
+}
+
+.hero-title {
+    font-size: var(--h1-font-size);
+    margin-bottom: 1rem;
+    font-weight: var(--font-bold);
+}
+
+.hero-subtitle {
+    font-size: var(--h3-font-size);
+    margin-bottom: 2.5rem;
+    color: var(--text-color);
+}
+
+/* === ABOUT SECTION === */
+.about-section {
+    /* Estilos base já definidos */
+}
+
+.about-text h2 { /* Título dentro da seção Sobre */
+    color: var(--first-color);
+    font-size: var(--h2-font-size);
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+.about-image img {
+    border-radius: 10px;
+}
+
+/* === SERVICES SECTION === */
+.services-section {
+    /* Estilos base já definidos */
+}
+
+.service-card {
+    background-color: var(--body-color);
+    padding: 2.5rem 2rem; /* Mais padding */
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition-base);
+    height: 100%; /* Para alinhar cards de mesma altura */
+    display: flex;
+    flex-direction: column; /* Para alinhar botão no final */
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow);
+    border-color: var(--first-color); /* Destaca ao passar o mouse */
+}
+
+.service-card-featured {
+    border-color: var(--first-color);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.3); /* Destaque sutil */
+}
+
+.service-card h3 {
+    font-size: var(--h3-font-size);
+    margin-bottom: 1rem;
+    color: var(--title-color);
+}
+
+.price {
+    font-size: 2.5rem; /* Um pouco menor que h1 */
+    color: var(--first-color);
+    margin-bottom: 1.5rem;
+    font-weight: var(--font-bold);
+}
+
+.service-features {
+    margin-bottom: 2rem;
+    flex-grow: 1; /* Empurra o botão para baixo */
+}
+
+.service-features li {
+    margin-bottom: 0.75rem; /* Mais espaço */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.service-features i { /* Estilo do ícone */
+    color: var(--first-color);
+}
+
+/* === PORTFOLIO SECTION === */
+.portfolio-section {
+   /* Estilos base já definidos */
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--container-color); /* Fundo caso a imagem não carregue */
+}
+
+.portfolio-item img {
+    transition: transform .4s ease-out, opacity .4s ease-out; /* Transição mais suave */
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Proporção para consistência */
+    object-fit: cover; /* Garante que a imagem cubra a área */
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05); /* Zoom menor */
+    opacity: 0.5; /* Escurece um pouco a imagem */
+}
+
+.portfolio-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent); /* Gradiente mais forte */
+    padding: 1.5rem 1rem;
+    color: white;
+    transform: translateY(100%); /* Começa escondido */
+    transition: transform .4s ease-out;
+}
+
+.portfolio-item:hover .portfolio-info {
+    transform: translateY(0); /* Revela ao passar o mouse */
+}
+
+.portfolio-info h3 {
+    font-size: var(--h3-font-size);
+    margin-bottom: 0.25rem;
+    color: var(--title-color);
+}
+
+.portfolio-info p {
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    margin-bottom: 0;
+}
+
+
+/* === CONTACT SECTION === */
+.contact-section {
+    /* Estilos base já definidos */
+}
+
+.contact-form .form-control { /* Estilo dos inputs Bootstrap */
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    transition: border-color .3s, box-shadow .3s;
+}
+
+.contact-form .form-control::placeholder {
+    color: var(--text-color-light);
+}
+
+.contact-form .form-control:focus {
+    background-color: var(--body-color); /* Mantém fundo no foco */
+    color: var(--text-color);
+    border-color: var(--first-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Foco Bootstrap padrão */
+}
+
+.contact-form textarea.form-control {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* === FOOTER === */
+.footer {
+    padding: 3rem 0 2rem;
+    background-color: var(--body-color);
+    border-top: 1px solid var(--border-color); /* Linha sutil */
+    color: var(--text-color-light);
+    font-size: var(--small-font-size);
+}
+
+.footer-content {
+    /* Alinhamento via Bootstrap row/col */
+}
+
+.footer-contact a {
+    color: var(--text-color);
+    transition: var(--transition-base);
+}
+
+.footer-contact a:hover {
+    color: var(--first-color);
+}
+
+/* === SIMPLE SCROLL ANIMATION === */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px); /* Começa um pouco abaixo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.delay-1 { transition-delay: 0.15s; }
+.animate-on-scroll.delay-2 { transition-delay: 0.3s; }
+.animate-on-scroll.delay-3 { transition-delay: 0.45s; }
+
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* === MEDIA QUERIES === */
+/* Pequenos ajustes para telas menores */
+@media screen and (max-width: 768px) {
+    :root {
+        --h1-font-size: 2rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.2rem;
+    }
+    .section {
+        padding: 4rem 0 2rem;
+    }
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    .portfolio-info { /* Garante que info apareça em mobile */
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    }
+    .portfolio-item img { /* Remove efeito hover mobile */
+       opacity: 1;
+    }
+}
+
+/* Ajustes para telas maiores */
+@media screen and (min-width: 992px) {
+     :root {
+        --h1-font-size: 3rem;
+        --h2-font-size: 2rem;
+        --h3-font-size: 1.5rem;
+        --normal-font-size: 1.05rem;
+    }
+    .section {
+        padding: 7rem 0 5rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px; /* Container maior para telas largas */
+    }
+     :root {
+         --h1-font-size: 3.5rem;
+    }
+}

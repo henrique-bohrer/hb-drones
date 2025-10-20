@@ -5,106 +5,173 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="hover.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>HB Drones - Imagens Aéreas</title>
+
+    <link rel="stylesheet" type="text/css" href="css/hover.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>HB Drones - Portfólio de Imagens Aéreas</title>
 </head>
 
 <body>
 
-    <header class="header">
-        <nav class="navbar">
+    <header class="header fixed-top" id="header">
+        <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo.png" alt="HB DRONES" height="65" class="logo">
+                <a class="navbar-brand" href="#home">
+                    <img src="img/logo.png" alt="HB DRONES Logo" height="55" class="logo">
                 </a>
-                <div class="buttons">
-                    <a href="#home" class="btn-nav hvr-underline-from-center">Home</a>
-                    <a href="#servicos" class="btn-nav hvr-underline-from-center">Serviços</a>
-                    <a href="#sobre" class="btn-nav hvr-underline-from-center">Sobre</a>
-                    <a href="#contato" class="btn-nav btn-contato hvr-grow">Contato</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link btn-nav hvr-underline-from-center">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#sobre" class="nav-link btn-nav hvr-underline-from-center">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#servicos" class="nav-link btn-nav hvr-underline-from-center">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#portfolio" class="nav-link btn-nav hvr-underline-from-center">Portfólio</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a href="#contato" class="nav-link btn-contato hvr-grow">Contato</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="hero-section">
+        <section id="home" class="hero-section d-flex align-items-center justify-content-center text-center">
             <div class="hero-content">
-                <h1 class="hero-title">Capturando o Mundo de Cima</h1>
-                <p class="hero-subtitle">Serviços profissionais de filmagem e fotografia com drone em Curitiba.</p>
-                <a href="#servicos" class="btn-main hvr-grow">Veja nossos pacotes</a>
+                <h1 class="hero-title animate-on-scroll">Capturando o Mundo de Cima</h1>
+                <p class="hero-subtitle animate-on-scroll delay-1">Serviços profissionais de filmagem e fotografia com
+                    drone em Curitiba.</p>
+                <a href="#servicos" class="btn btn-main hvr-grow animate-on-scroll delay-2">Veja nossos pacotes</a>
             </div>
         </section>
 
-        <section id="servicos" class="services-section">
+        <section id="sobre" class="about-section section">
             <div class="container">
-                <h2 class="section-title">Nossos Serviços</h2>
-                <div class="services-grid">
-                    <div class="service-card hvr-grow">
-                        <h3>Pacote Básico</h3>
-                        <p class="price">R$250</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> Fotos e vídeos brutos</li>
-                            <li><i class="fas fa-check-circle"></i> Captura em alta resolução</li>
-                            <li><i class="fas fa-check-circle"></i> Ideal para quem prefere editar</li>
-                        </ul>
-                        <a href="#contato" class="btn-main">Solicitar Orçamento</a>
+                <h2 class="section-title animate-on-scroll">Sobre a HB Drones</h2>
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6 about-text animate-on-scroll">
+                        <p>
+                            A HB Drones é uma Microempreendedor Individual (MEI) especializada em serviços de drone
+                            e imagens aéreas na região de Curitiba. Nosso foco principal é o acompanhamento de
+                            territórios e a criação de imagens para imobiliárias, fornecendo material de alta qualidade
+                            e precisão
+                            para auxiliar na avaliação e marketing de propriedades.
+                        </p>
+                        <p>
+                            Utilizando equipamentos de última geração, capturamos imagens aéreas
+                            detalhadas e em alta resolução, permitindo uma visão ampla e clara
+                            do terreno ou propriedade. Nossos serviços também se aplicam a inspeções de infraestruturas,
+                            mapeamento agrícola, monitoramento ambiental e muito mais.
+                        </p>
                     </div>
-                    <div class="service-card service-card-featured hvr-grow">
-                        <h3>Pacote Profissional</h3>
-                        <p class="price">R$300</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> Fotos e vídeos tratados</li>
-                            <li><i class="fas fa-check-circle"></i> Edição profissional de cor e luz</li>
-                            <li><i class="fas fa-check-circle"></i> Pronto para usar em suas mídias</li>
-                        </ul>
-                        <a href="#contato" class="btn-main">Solicitar Orçamento</a>
+                    <div class="col-lg-6 about-image animate-on-scroll delay-1">
+                        <img src="img/mavic-mini-2.jpg" alt="Drone Mavic Mini 2 sendo segurado na mão"
+                            class="img-fluid rounded shadow">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="sobre" class="about-section">
+        <section id="servicos" class="services-section section bg-darker">
             <div class="container">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2>Sobre a HB Drones</h2>
-                        <p>
-                            A empresa em questão é uma Microempreendedor Individual (MEI) que oferece serviços de drone
-                            e imagens aéreas na região de Curitiba. Seu principal serviço é o acompanhamento de
-                            territórios e imagens para imobiliárias, fornecendo imagens de alta qualidade e precisão
-                            para ajudar na avaliação de propriedades.
-                        </p>
-                        <p>
-                            Utilizando equipamentos de última geração, a empresa é capaz de capturar imagens aéreas
-                            detalhadas e em alta resolução, permitindo que seus clientes tenham uma visão ampla e clara
-                            do terreno ou propriedade que estão avaliando. Além disso, os serviços oferecidos pela
-                            empresa também podem ser utilizados em outras áreas, como inspeção de infraestruturas,
-                            mapeamento de áreas agrícolas, monitoramento ambiental e muitos outros.
-                        </p>
+                <h2 class="section-title animate-on-scroll">Nossos Serviços</h2>
+                <div class="row justify-content-center g-4">
+                    <div class="col-md-6 col-lg-5 animate-on-scroll">
+                        <div class="service-card hvr-grow text-center">
+                            <h3>Pacote Básico</h3>
+                            <p class="price">R$250</p>
+                            <ul class="service-features list-unstyled text-start mx-auto" style="max-width: 250px;">
+                                <li><i class="fas fa-check-circle me-2"></i> Fotos e vídeos brutos</li>
+                                <li><i class="fas fa-check-circle me-2"></i> Captura em alta resolução</li>
+                                <li><i class="fas fa-check-circle me-2"></i> Ideal para quem prefere editar</li>
+                            </ul>
+                            <a href="#contato" class="btn btn-main mt-3">Solicitar Orçamento</a>
+                        </div>
                     </div>
-                    <div class="about-image">
-                        <img src="img/mavic-mini-2.jpg" alt="Drone em operação">
+                    <div class="col-md-6 col-lg-5 animate-on-scroll delay-1">
+                        <div class="service-card service-card-featured hvr-grow text-center">
+                            <h3>Pacote Profissional</h3>
+                            <p class="price">R$300</p>
+                            <ul class="service-features list-unstyled text-start mx-auto" style="max-width: 250px;">
+                                <li><i class="fas fa-check-circle me-2"></i> Fotos e vídeos tratados</li>
+                                <li><i class="fas fa-check-circle me-2"></i> Edição profissional de cor e luz</li>
+                                <li><i class="fas fa-check-circle me-2"></i> Pronto para usar em suas mídias</li>
+                            </ul>
+                            <a href="#contato" class="btn btn-main mt-3">Solicitar Orçamento</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contato" class="contact-section">
+        <section id="portfolio" class="portfolio-section section">
             <div class="container">
-                <h2 class="section-title">Entre em Contato</h2>
-                <form action="#" class="contact-form">
-                    <input type="text" name="name" placeholder="Seu Nome" required>
-                    <input type="email" name="email" placeholder="Seu Email" required>
-                    <textarea name="message" placeholder="Descreva seu projeto..." required></textarea>
-                    <button type="submit" class="btn-main">Enviar Mensagem</button>
+                <h2 class="section-title animate-on-scroll">Portfólio</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 animate-on-scroll">
+                        <div class="portfolio-item">
+                            <img src="img/portfolio-item-1.png" alt="Foto aérea Chateau de Vermont" class="img-fluid">
+                            <div class="portfolio-info">
+                                <h3>Mapeamento Imobiliário</h3>
+                                <p>Chateau de Vermont</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 animate-on-scroll delay-1">
+                        <div class="portfolio-item">
+                            <img src="img/background.png" alt="Vista aérea de Curitiba" class="img-fluid">
+                            <div class="portfolio-info">
+                                <h3>Acompanhamento de Obras</h3>
+                                <p>Construção XYZ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 animate-on-scroll delay-2">
+                        <div class="portfolio-item">
+                            <img src="img/mavic-mini-2.jpg" alt="Detalhe Drone Mavic Mini 2" class="img-fluid">
+                            <div class="portfolio-info">
+                                <h3>Fotografia de Equipamento</h3>
+                                <p>DJI Mavic Mini 2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact-section section bg-darker">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Entre em Contato</h2>
+                <form action="#" class="contact-form mx-auto animate-on-scroll" style="max-width: 600px;">
+                    <div class="mb-3">
+                        <input type="text" name="name" class="form-control" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" name="email" class="form-control" placeholder="Seu Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea name="message" class="form-control" placeholder="Descreva seu projeto..." rows="5"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-main w-100">Enviar Mensagem</button>
                 </form>
             </div>
         </section>
@@ -112,18 +179,56 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <p>&copy; 2024 HB Drones. Todos os direitos reservados.</p>
-                    <p>Curitiba, Paraná</p>
+            <div class="footer-content row text-center text-md-start gy-3">
+                <div class="col-md-6 footer-info">
+                    <p class="mb-1">&copy; <span id="year"></span> HB Drones. Todos os direitos reservados.</p>
+                    <p class="mb-0">Curitiba, Paraná</p>
                 </div>
-                <div class="footer-contact">
-                    <a href="mailto:henrique300415@gmail.com">henrique300415@gmail.com</a>
-                    <p>(49) 98428-7347</p>
+                <div class="col-md-6 footer-contact text-md-end">
+                    <a href="mailto:henrique300415@gmail.com" class="d-block mb-1">henrique300415@gmail.com</a>
+                    <p class="mb-0">(49) 98428-7347</p>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Atualiza o ano no footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Adiciona sombra ao header ao rolar
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scroll-header');
+            } else {
+                header.classList.remove('scroll-header');
+            }
+        });
+
+        // Simples Animação de Scroll (Intersection Observer)
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    // Opcional: parar de observar após animação
+                    // observer.unobserve(entry.target);
+                } else {
+                    // Opcional: remover a classe se sair da view para re-animar
+                    entry.target.classList.remove('animated');
+                }
+            });
+        }, {
+            threshold: 0.1 // Anima quando 10% do elemento está visível
+        });
+
+        animatedElements.forEach(el => observer.observe(el));
+    </script>
 
 </body>
 
